@@ -1,0 +1,18 @@
+name: 'Data Request Initializer'
+description: 'Create a readme, new branch, and assign the current user for a given issue.'
+inputs:
+  issue-id:
+    description: 'Issue ID Number'
+    required: true
+    default: '1'
+  dir-name:
+    description: 'New folder name -- ie `lastname-census-report'
+    required: true
+    default: 'unknownname-unknown-request'
+outputs:
+  branch-name: # id of output
+    description: 'The name of the newly created branch'
+runs:
+  using: 'node16'
+  main: 'index.js'
+
